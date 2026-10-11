@@ -1,17 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
-int double_array(int *a, int len) {
-  for (int i = 0; i < len; i++) {
-    a[i] *= 2;
+int mystr_len(char *s) {
+  int count = 0;
+
+  while (s[count] != '\0') {
+    count++;
   }
+
+  return count;
 }
 
 int main(void) {
-  int arr[4] = {2, 3, 5, 9};
+  char t[] = "Hello!";
 
-  double_array(arr, 4);
-
-  for (int i = 0; i < 4; i++) {
-    printf("%d \n", arr[i]);
-  }
+  printf("%d\n", mystr_len(t));
 }
