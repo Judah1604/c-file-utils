@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
-int mystr_len(char *s) {
-  int count = 0;
-
-  while (s[count] != '\0') {
-    count++;
-  }
-
-  return count;
-}
+struct car {
+  char *name;
+  float price;
+  int speed;
+};
 
 int main(void) {
-  char t[] = "Hello!";
+  struct car saturn = {"Saturn S", 16000.99, 30};
 
-  printf("%d\n", mystr_len(t));
+  printf("Name:  %s\n", saturn.name);
+  printf("Price:  %f\n", saturn.price);
+  printf("Speed:  %d\n", saturn.speed);
 }
